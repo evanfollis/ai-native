@@ -1,0 +1,16 @@
+[project]
+name = "ai-native"
+version = "0.1.0"
+description = "AI-native OS layer with epistemic state uploads (Lola-Jett Kernel + multi-agent scaffold)"
+authors = [
+  { name = "Evan + ChatGPT-derived", email = "example@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "openai>=1.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
