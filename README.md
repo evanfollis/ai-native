@@ -45,3 +45,27 @@ cd ai-native-os
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+```
+Set your OpenAI key:
+
+```bash
+export OPENAI_API_KEY="sk-..."  # PowerShell: $env:OPENAI_API_KEY="sk-..."
+```
+
+## Run examples
+
+Single-agent LJ-Kernel:
+
+```python
+python scripts/run_lj_kernel.py
+```
+
+Multi-agent scaffold (dry run, no real file writes):
+
+```python
+python scripts/run_multi_agent.py
+```
+
+By default, filesystem whiteboard snapshots go under whiteboard/ and demo repos under demo_repo/ and multi_demo_repo/.
+
+NOTE: The Agent._extract_text helper may need minor adjustment depending on the exact openai SDK version and Responses API schema you’re using. It’s written to be conservative and easy to tweak.
